@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def home(request):
   return HttpResponse("<h1>Blog Home page :)</h1>")
 
-def contact(request):
-  return HttpResponse("<h1>Blog Contact page :) </h1>")
+def about(request):
+  return HttpResponse("<h1>This is About page :) </h1>")
