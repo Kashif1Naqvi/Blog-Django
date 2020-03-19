@@ -1,0 +1,13 @@
+body{
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Staatliches', cursive;    
+}
+strong{
+  font-size: 20px;
+}
+.box{
+  box-shadow: 15px 15px 15px 15px white;
+}

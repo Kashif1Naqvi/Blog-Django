@@ -7,8 +7,10 @@
   <!-- Required meta tas -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Archivo+Narrow|Cabin+Sketch|Dancing+Script:400,500|Open+Sans+Condensed:300|Staatliches&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css'%}">
    {% if title %}
       <title>Blog | {{title}}</title>
    {% else %}
@@ -16,36 +18,58 @@
    {% endif %}
 </head>
 <body>
-  <header class="container-fluid" >
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-      <a href="#" class="navbar-brand">Django Blog</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse"  id="navBar" >
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
-          </li>
-        </ul>
-        <div class="form-inline navbar-nav  my-2 my-lg-0">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Login</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" >Register</a>
-          </li>
+  <div class="container-fluid">
+    <header >
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container">
+          <a href="#" class="navbar-brand">Django Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse container"  id="navBar" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+          </ul>
+          <div class="form-inline navbar-nav  my-2 my-lg-0">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" >Register</a>
+            </li>
+          </div>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-8 ">
+          {% block content %} {% endblock content %}
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <div class="card-body">
+              <h1>Our Sidebar</h1>
+              <p>You can put any information here you'd like</p>
+              <ul class="list-group list-group-flush" >
+                <li class="list-group-item" >Latest Posts</li>
+                <li class="list-group-item" >Anouncements</li>
+                <li class="list-group-item" >Calenders</li>
+                <li class="list-group-item" >etc</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-
-  </header>
-  <div class="container" >
-    {% block content %} {% endblock content %}
+    </div>
   </div>
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
