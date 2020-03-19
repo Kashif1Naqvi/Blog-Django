@@ -4,7 +4,7 @@
   {% for post in posts %}
     <div class="bg-light mt-3 " >
       <div class="pl-4 pb-2 pt-2  ">
-        <strong class="text-info " >{{ post.author }}</strong>  {{ post.date_posted|date:'F d, Y' }} <hr>
+        <strong class="text-info " >{{ post.author }}</strong>  {{ post.date_posted|date:'F d, Y' }} <hr> 
         <h3>{{ post.title }}</h3>
         <p>{{ post.content }} </p>
       </div>
@@ -12,3 +12,4 @@
   {% endfor %} 
 {% endblock content %}
   
+{% comment %} Here F is full month name d for days number and Y for full year like  March 19, 2020  {% endcomment %}

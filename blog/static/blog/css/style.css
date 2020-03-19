@@ -1,6 +1,7 @@
 body{
-  font-family: 'Handlee', cursive;
-font-family: 'Ruthie', cursive; 
+  font-family: 'Barlow Condensed', sans-serif;
+  background-image: url('https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
 }
 strong{
   font-size: 20px;

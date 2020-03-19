@@ -7,7 +7,7 @@
   <!-- Required meta tas -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="https://fonts.googleapis.com/css?family=Handlee|Ruthie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Dancing+Script:700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.min.css'%}">
   <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css'%}">
@@ -20,7 +20,7 @@
 <body>
   <div class="container-fluid">
     <header >
-      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light bg-light ">
         <div class="container">
           <a href="#" class="navbar-brand">Django Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
@@ -47,15 +47,15 @@
         </div>
       </nav>
     </header>
-    <div class="container mt-4">
+    <div class="container mt-5"  >
       <div class="row">
-        <div class="col-8 ">
+        <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 ">
           {% block content %} {% endblock content %}
         </div>
-        <div class="col-4">
-          <div class="card">
+        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <div class="card mt-3">
             <div class="card-body">
-              <h1>Our Sidebar</h1>
+              <h1 class="font-weight-bold">Our Sidebar</h1>
               <p>You can put any information here you'd like</p>
               <ul class="list-group list-group-flush" >
                 <li class="list-group-item" >Latest Posts</li>
