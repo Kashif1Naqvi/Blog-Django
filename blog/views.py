@@ -5,15 +5,15 @@ from django.http import HttpResponse
 posts = [
     {
         'author':'Kashif',
-        'title' :'Blog post 1',
-        'content':'Blog post content',
+        'title' :'Programming',
+        'content':'Now a days! Coding work is done very fast and solve our problem.so we try to avoid the all problem that we not fixed.so computer programming is basically telling the computer what to do',
         'date_posted':'March 17 2020'
     },
     {
-        'author':'Hassan',
-        'title' :'Blog post 2',
-        'content':'Blog post contents ',
-        'date_posted':'March 18 2020'
+        'author':'Haider',
+        'title' :'Prophet Muhammad',
+        'content':'Prophet Muhammad(saw) says! I am the city of knowledge Ali(as) is his Gate come for gate let me more! ',
+        'date_posted':'March 19 2020'
     },
     
 ]
