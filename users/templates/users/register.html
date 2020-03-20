@@ -1,4 +1,21 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-    <h1>code is game</h1>
+    <form class="form" method="POST" >
+        {% csrf_token %} 
+        <fieldset class="border-top" >
+          <legend class="text-muted" >Join now</legend>
+        </fieldset>
+      <div class="form-group">
+        {% comment %}as_p devide in paragrapjs  {% endcomment %}
+        {{form.as_p}}  
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg" >Sign Up</button>
+      </div>
+    </form>
+    <div  class="form-group" >
+      <small class="text-mited">
+        Do you have an account Already? <a href="#" class="ml-2" >Sign In</a>
+      </small>
+    </div>
 {% endblock content %}
