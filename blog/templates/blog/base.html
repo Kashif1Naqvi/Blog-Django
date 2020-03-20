@@ -50,7 +50,11 @@
     <div class="container mt-5"  >
       <div class="row">
         <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 ">
+          {% for message in messages %}
+            <div class="alert alert-{{messages.tags}}" >{{message}}</div>
+          {% endfor %}
           {% block content %} {% endblock content %}
+          
         </div>
         <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
           <div class="card mt-3">
