@@ -38,6 +38,9 @@
           <div class="form-inline navbar-nav  my-2 my-lg-0">
             {% if user.is_authenticated  %}
               <li class="nav-item">
+                <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+              </li>
+              <li class="nav-item">
                 <a href="{% url 'logout' %}" class="nav-link">Logout</a>
               </li>
             {%else%}
