@@ -7,7 +7,7 @@
           <legend class="text-muted" >Join now</legend>
         </fieldset>
       <div class="form-group">
-        {% comment %}as_p devide in paragrapjs  {% endcomment %}
+        {% comment %}as_p devide in paragrapjs not need because now i install crispy form  pip3 install django-crispy-forms.and add bootstrap4 init {% endcomment %}
         {{form|crispy}}  
       </div>
       <div class="form-group">
@@ -16,7 +16,7 @@
     </form>
     <div  class="form-group" >
       <small class="text-mited">
-        Do you have an account Already? <a href="#" class="ml-2" >Sign In</a>
+        Do you have an account Already? <a href="{%  url 'Login' %}" class="ml-2" >Sign In</a>
       </small>
     </div>
 {% endblock content %}
