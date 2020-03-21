@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="section mt-5">
+  <h1  class="text-muted" >
+    You are logout successfully 
+  </h1>
+  <div class="form-group">
+    <a href="{%  url 'Login' %}"  class="text-info">Login again</a>
+  </div>
+</div>
+{% endblock content %}
