@@ -83,7 +83,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -123,9 +122,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')  #Iit's use to create a media folder at root of the folder
-MEDIA_URL  = 'media/'   # that make folder in which make my custom folder that i make in model for store image name 'profile_pics' then un it store my pics
+ #Iit's use to create a media folder at root of the folder
+MEDIA_ROOT = os.path.join(BASE_DIR , 'media') 
+MEDIA_URL  = '/media/'  
+ # that make folder in which make my custom folder that i make in model for store image name 'profile_pics' then un it store my pics
 
 LOGIN_REDIRECT_URL = 'blog-home'
 

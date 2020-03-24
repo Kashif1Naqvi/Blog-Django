@@ -1,4 +1,17 @@
-{% extends 'blog/base.html' %}      
+{% extends 'blog/base.html' %} 
+{% load crispy_forms_tags %}
 {% block content %}
-  <h1 class="p-5 m-5" >{{ user.username }}</h1>
+  <div class="content-section bg-light mt-5">
+      {% if user.profile.image.url %}
+        <img src="{{user.profile.image.url }}" alt="" class=" rounded-circle" width="94" height="66">
+      {% else %}
+        <img src="{{user.profile.image.url }}/media/azadari.png" alt="" class=" rounded-circle" width="94" height="66">
+      {% endif %}
+    <div class="media">
+      <div class="media-body">
+        <h2 class="Heading">{{user.username}}</h2>
+        <p class="text-secondary">{{user.email}}</p>
+      </div>
+    </div>
+  </div>
 {% endblock content %}

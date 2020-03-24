@@ -1,11 +1,17 @@
 body{
   font-family: 'Barlow Condensed', sans-serif;
-  /* background-image: url('https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); */
-  /* background-size: cover; */
+  background-color:white;
 }
 strong{
   font-size: 20px;
 }
 .box{
   box-shadow: 15px 15px 15px 15px white;
+}
+.media{
+  border:2px 2px solid aqua;
+  padding: 5px;
+}
+img{
+  margin-right: 12px;
 }
