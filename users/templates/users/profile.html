@@ -15,5 +15,19 @@
           <p class="text-secondary">{{user.email}}</p>
       </div>
     </div>
+     <form class="form" method="POST" enctype="multipart/form-data" >
+        {% csrf_token %} 
+        <fieldset class="border-top" >
+          <legend class="text-muted" >Update Profile</legend>
+        </fieldset>
+      <div class="form-group">
+        {% comment %}as_p devide in paragrapjs not need because now i install crispy form  pip3 install django-crispy-forms.and add bootstrap4 init {% endcomment %}
+        {{u_form|crispy}}  
+        {{p_form|crispy}}  
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg" >Update Profile</button>
+      </div>
+    </form>
   </div>
 {% endblock content %}
