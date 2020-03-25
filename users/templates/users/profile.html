@@ -4,9 +4,9 @@
   <div class="content-section bg-light mt-5">
     <div class="row ">
       <div class="ml-4 mt-2" >
-        {% if user.profile.image.url %}
+        {% if user.profile.image.url %} 
           <img src="{{user.profile.image.url }}" alt="" class=" rounded-circle" width="94" height="66">
-        {% else %}
+         {% else %}
           <img src="{{user.profile.image.url }}/media/azadari.png" alt="" class=" rounded-circle" width="94" height="66">
         {% endif %}
       </div>
@@ -15,8 +15,7 @@
           <p class="text-secondary">{{user.email}}</p>
       </div>
     </div>
-     <form class="form" method="POST" enctype="multipart/form-data" >
-        {% csrf_token %} 
+     <form class="form" method="post" enctype="multipart/form-data">{% csrf_token %}
         <fieldset class="border-top" >
           <legend class="text-muted" >Update Profile</legend>
         </fieldset>
