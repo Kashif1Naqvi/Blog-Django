@@ -21,13 +21,13 @@
 <body>
   <div class="container-fluid">
     <header >
-      <nav class="navbar navbar-expand-lg fixed-top  navbar-light bg-light ">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light " >
         <div class="container">
           <a href="#" class="navbar-brand">Django Blog</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse container"  id="navBar" >
+        <div class="collapse navbar-collapse"  id="navBar" >
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <a href="{% url 'blog-home' %}" class="nav-link">Home</a>
@@ -36,7 +36,7 @@
               <a href="{% url 'blog-about' %}" class="nav-link">About</a>
             </li>
           </ul>
-          <div class="form-inline navbar-nav  my-2 my-lg-0">
+          <div class="form-inline navbar-nav  my-lg-0">
             {% if user.is_authenticated  %}
               <li class="nav-item">
                 <a href="{% url 'profile' %}" class="nav-link">Profile</a>
