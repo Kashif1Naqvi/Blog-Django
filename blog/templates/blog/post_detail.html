@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    <div class="bg-light mt-3 row" >
+      <div class="ml-4 mt-2" >
+          <img src="{{object.author.profile.image.url }}" alt="" class="img-fluid rounded-circle" width="94" height="66">
+      </div>
+      <div class="mt-4">
+        <strong class="text-info " >{{ object.author }}</strong>  {{ object.date_posted|date:'F d, Y' }} 
+      </div>
+      <div class="pl-4 pb-2 pt-2">
+        <h3>{{ object.title }}</h3>
+        <p>{{ object.content }} </p>
+      </div>
+    </div>
+{% endblock content %}

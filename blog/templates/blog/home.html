@@ -10,8 +10,8 @@
         <strong class="text-info " >{{ post.author }}</strong>  {{ post.date_posted|date:'F d, Y' }} 
       </div>
       <div class="pl-4 pb-2 pt-2">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.content }} </p>
+        <a class="text-info text-lg" href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+        <p  >{{ post.content }} </p>
       </div>
     </div>
   {% endfor %} 
