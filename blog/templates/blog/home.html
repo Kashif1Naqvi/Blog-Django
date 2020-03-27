@@ -11,7 +11,7 @@
       </div>
       
       <div class=" pb-2 pt-2 col-12 col-sm-8 col-md-8 col-lg-8">
-        <a class="text-info text-lg" href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+        <h1><a class="text-info text-lg" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h1>
         <p>{{post.content}}</p>
       </div>
     </div>
