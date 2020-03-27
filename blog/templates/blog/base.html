@@ -20,7 +20,7 @@
 </head>
 <body>
   <div class="container-fluid">
-    <header >
+    <header>
       <nav class="navbar navbar-expand-lg fixed-top  navbar-light " >
         <div class="container">
           <a href="#" class="navbar-brand">Django Blog</a>
@@ -57,16 +57,16 @@
         </div>
       </nav>
     </header>
-    <div class="container mt-5"  >
+    <div class="container mt-5 p-5"  >
       <div class="row">
-        <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 ">
+        <div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
           {% for message in messages %}
             <div class="alert alert-{{message.tags}}" >{{message}}</div>
           {% endfor %}
           {% block content %} {% endblock content %}
           
         </div>
-        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
           <div class="card mt-3">
             <div class="card-body">
               <h1 class="font-weight-bold">Our Sidebar</h1>
