@@ -8,6 +8,12 @@
       <div class="mt-4">
         <strong class="text-info " >{{ object.author }}</strong>  {{ object.date_posted|date:'F d, Y' }} 
       </div>
+      <div class="mt-2" >
+        {% if object.author == user %}
+          <a class="btn btn-outline-secondary btn-sm" href="{% url 'post-update' object.id  %}">Update</a>
+          <a class="btn btn-outline-danger btn-sm" href="{% url 'post-delete' object.id  %}">Delete</a>
+        {% endif %}
+      </div>
     </div>
     <div class="col-12 pl-4 pb-2 pt-2">
       <h3>{{ object.title }}</h3>
