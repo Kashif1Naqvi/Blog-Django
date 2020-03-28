@@ -6,7 +6,7 @@
         <img src="{{object.author.profile.image.url }}" alt="" class="img-fluid rounded" width="94" height="66">
       </div>
       <div class="mt-4">
-        <strong class="text-info " >{{ object.author }}</strong>  {{ object.date_posted|date:'F d, Y' }} 
+        <a href="{% url 'post-user' object.author.username %}"><strong class="text-info">{{ object.author }}</strong></a>  {{ object.date_posted|date:'F d, Y' }} 
       </div>
       <div class="mt-2" >
         {% if object.author == user %}
