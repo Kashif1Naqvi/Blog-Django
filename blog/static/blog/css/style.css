@@ -1,7 +1,8 @@
 body{
   font-family: 'Barlow Condensed', sans-serif;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYZp0npqgkmTcKyXyEoRZSe-mSpbEk1dII0wbyG-OB-J5FcNE9');
-  background-size: cover;
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYZp0npqgkmTcKyXyEoRZSe-mSpbEk1dII0wbyG-OB-J5FcNE9');
+  background-size: cover; */
+  background-color: #e9ebee;
 }
 strong{
   font-size: 20px;
