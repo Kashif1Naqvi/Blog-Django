@@ -2,8 +2,8 @@
 {% load crispy_forms_tags %}
 {% block content %}
   <div class="content-section bg-light mt-5">
-    <div class="row ">
-      <div class="ml-4 mt-2" >
+    <div class="row m-2">
+      <div class="ml-4 mt-2">
         {% if user.profile.image.url %} 
           <img src="{{user.profile.image.url }}" alt="" class="img-fluid rounded-circle" width="94" height="66">
          {% else %}
@@ -11,11 +11,11 @@
         {% endif %}
       </div>
       <div>
-          <h2 class="Heading">{{user.username}}</h2>
+          <h2 class="display-5">{{user.username}}</h2>
           <p class="text-secondary">{{user.email}}</p>
       </div>
     </div>
-    <form class="form" method="post" enctype="multipart/form-data">
+    <form class="form m-5 " method="post" enctype="multipart/form-data">
       {% csrf_token %}
       <fieldset class="border-top" >
         <legend class="text-muted" >Update Profile</legend>
@@ -25,8 +25,8 @@
         {{u_form|crispy}}  
         {{p_form|crispy}}  
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-lg" >Update Profile</button>
+      <div class="form-group mt-1">
+        <button type="submit" class="btn btn-info btn-sm" >Update Profile</button>
       </div>
     </form>
   </div>

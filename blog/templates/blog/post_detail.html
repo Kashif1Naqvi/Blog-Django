@@ -1,9 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-  <div class="bg-light mt-3 row text-center" >
+  <div class="bg-light mt-3 row text-center" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="linear">
     <div class="col-12" >
       <div class="ml- 4 mt-2" >
-        <img src="{{object.author.profile.image.url }}" alt="" class="img-fluid rounded" width="94" height="66">
+        <img src="{{object.author.profile.image.url }}" alt="" class="img-fluid rounded-circle" width="205" height="86">
       </div>
       <div class="mt-4">
         <a href="{% url 'post-user' object.author.username %}"><strong class="text-info">{{ object.author }}</strong></a>  {{ object.date_posted|date:'F d, Y' }} 

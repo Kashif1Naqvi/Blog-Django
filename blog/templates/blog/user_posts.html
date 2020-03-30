@@ -1,17 +1,17 @@
 {% extends 'blog/base.html' %} 
 {% block content %}
-  <h1 class="text-info text-lg" >post of {{ view.kwargs.username }} ({{ page_obj.paginator.count }}) </h1>
+  <h1 class="text-info " >posts of {{ view.kwargs.username }} ({{ page_obj.paginator.count }}) </h1>
   {% for post in posts %}
-    <div class="bg-light mt-3 row" >
-      <div class="col-12 col-sm-4 col-md-4 col-lg-4 mt-3" >
-          <img src="{{post.author.profile.image.url }}" alt="" class="img-fluid rounded-circle" width="94" height="66">
-          <div class="mt-3">
-            <a href="{% url 'post-user' post.author.username %}" ><strong class="text-info">{{ post.author }}</strong></a>{{ post.date_posted|date:'F d, Y' }} 
-          </div>
+    <div class="bg-light mt-3 p-3" >
+      <div data-aos="fade-right" data-aos-duration="3000">
+        <img src="{{post.author.profile.image.url }}" alt="" class="img-fluid rounded-circle" width="50" height="43">
+        <a href="{% url 'post-user' post.author.username %}" class="text-info">{{ post.author }}</a>
+      &nbsp;{{ post.date_posted|date:'F d, Y' }} 
       </div>
-      <div class=" pb-2 pt-2 col-12 col-sm-8 col-md-8 col-lg-8">
-        <h1><a class="text-info text-lg" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h1>
+      <div class="ml-5 pl-3" data-aos="fade-left" data-aos-duration="3000">
+        <h2 class="font-weight-bold text-info  " >{{post.title}}</h2>
         <p>{{post.content}}</p>
+        <a class="text-info" href="{% url 'post-detail' post.id %}">Read more...</a>
       </div>
     </div>
   {% endfor %} 

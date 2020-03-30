@@ -7,7 +7,7 @@
   <!-- Required meta tas -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed|Dancing+Script:700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.min.css' %}">
   {% comment %} <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> {% endcomment %}
@@ -20,72 +20,57 @@
 </head>
 <body>
   <div class="container-fluid">
-    <header class="bg-dark" >
       <nav class="navbar navbar-expand-sm fixed-top  navbar-dark bg-dark " >
-        <div class="container">
           <a href="/" class="navbar-brand">Django Blog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse"  id="navBar" >
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a href="{% url 'blog-home' %}" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="{% url 'blog-about' %}" class="nav-link">About</a>
-            </li>
-          </ul>
-          <div class="form-inline navbar-nav  my-lg-0">
-            {% if user.is_authenticated  %}
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse"  id="navBar" >
+            <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+                <a href="{% url 'blog-home' %}" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="{% url 'post-create' %}" class="nav-link">Create Post</a>
+                <a href="{% url 'blog-about' %}" class="nav-link">About</a>
               </li>
-              <li class="nav-item">
-                <a href="{% url 'logout' %}" class="nav-link">Logout</a>
-              </li>
-            {%else%}
-              <li class="nav-item">
-                <a href="{%  url 'login' %}" class="nav-link">Login</a>
-              </li>
-              <li class="nav-item">
-                <a href="{% url 'register' %}" class="nav-link" >Register</a>
-              </li>
-            {%endif%}
-          </div>
-        </div>
-        </div>
-      </nav>
-    </header>
-    <div class="container mt-5 p-2"  >
-      <div class="row">
-        <div class="col-12 col-sm-9 col-md-9 col-lg-9 col-xl-9 ">
-          {% for message in messages %}
-            <div class="alert alert-{{message.tags}}" >{{message}}</div>
-          {% endfor %}
-          {% block content %} {% endblock content %}
-        </div>
-        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
-          <div class="card mt-3">
-            <div class="card-body">
-              <h4 class="font-weight-bold">Our Sidebar</h4>
-              <p>You can put any information here you'd like</p>
-              <ul class="list-group list-group-flush" >
-                <li class="list-group-item" >Latest Posts</li>
-                <li class="list-group-item" >Anouncements</li>
-                <li class="list-group-item" >Calenders</li>
-                <li class="list-group-item" >etc</li>
-              </ul>
+            </ul>
+            <div class="form-inline navbar-nav  my-lg-0">
+              {% if user.is_authenticated  %}
+                <li class="nav-item">
+                  <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'post-create' %}" class="nav-link">Create Post</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+                </li>
+              {%else%}
+                <li class="nav-item">
+                  <a href="{%  url 'login' %}" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a href="{% url 'register' %}" class="nav-link" >Register</a>
+                </li>
+              {%endif%}
             </div>
           </div>
+      </nav>
+    <div class="container mt-5 pt-2"  >
+        {% for message in messages %}
+          <div class="alert alert-{{message.tags}}" >{{message}}</div>
+        {% endfor %}
+        <div data-aos="flip-left">
+          <div class="container">
+            {% block content %} {% endblock content %}
+          </div>
         </div>
-      </div>
     </div>
   </div>
-  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
