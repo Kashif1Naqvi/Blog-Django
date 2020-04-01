@@ -1,1 +1,1 @@
-web: gunicorn django_project.wsgi
+worker: gunicorn django_project.wsgi
