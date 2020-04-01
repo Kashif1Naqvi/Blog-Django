@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %} 
 {% block content %}
   {% for post in posts %}
-    <div class="bg-light mt-3 p-3 container" >
+    <div class="bg-light mt-3 p-3" >
       <div data-aos="fade-right" data-aos-duration="3000">
         <img src="{{post.author.profile.image.url }}" alt="" class="img-fluid rounded-circle" width="50" height="43">
         <a href="{% url 'post-user' post.author.username %}" class="text-info">{{ post.author }}</a>
