@@ -1,4 +1,4 @@
-apturl==0.5.2
+
 asgiref==3.2.3
 asn1crypto==0.24.0
 blinker==1.4
@@ -75,7 +75,6 @@ system-service==0.3
 systemd-python==234
 testresources==2.0.1
 ubuntu-advantage-tools==19.2
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.24.1
