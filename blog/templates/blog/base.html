@@ -19,8 +19,9 @@
    {% endif %}
 </head>
 <body>
-  <div class="container-fluid">
-      <nav class="navbar navbar-expand-sm fixed-top  navbar-dark bg-dark " >
+  <div class="container">
+    <div class="row">
+      <nav class="navbar navbar-expand-md fixed-top  navbar-dark bg-dark " >
           <a href="/" class="navbar-brand">Django Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar"  aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -55,16 +56,29 @@
               {%endif%}
             </div>
           </div>
-      </nav>
-    <div class="container mt-5 pt-2"  >
+        </nav>
+      </div>
+    <div class="row mt-5">
+      <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
         {% for message in messages %}
-          <div class="alert alert-{{message.tags}}" >{{message}}</div>
+        <div class="alert alert-{{message.tags}}" >{{message}}</div>
         {% endfor %}
         <div data-aos="flip-left">
           <div class="container">
             {% block content %} {% endblock content %}
           </div>
         </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 mt-5">
+        <h7 class="font-weight-bold">Our Sidebar</h7>	
+        <p>You can put any information here you'd like</p>	
+        <ul class="list-group list-group-flush" >	
+          <li class="list-group-item" >Latest Posts</li>	
+          <li class="list-group-item" >Anouncements</li>	
+          <li class="list-group-item" >Calenders</li>	
+          <li class="list-group-item" >etc</li>	
+        </ul>	
+      </div>
     </div>
   </div>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -78,3 +92,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
