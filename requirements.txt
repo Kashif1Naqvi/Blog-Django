@@ -63,7 +63,7 @@ pytz==2018.9
 pyxattr==0.6.1
 pyxdg==0.25
 PyYAML==3.13
-reportlab==3.5.18
+reportlab==3.5.55
 requests==2.21.0
 requests-unixsocket==0.1.5
 s3transfer==0.2.0
